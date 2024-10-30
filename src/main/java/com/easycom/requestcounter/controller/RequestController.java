@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class RequestController {
 
-    private final RequestCountService countService;
-
     @Autowired
+    private RequestCountService countService;
+
+    /*@Autowired
     public RequestController(RequestCountService countService) {
         this.countService = countService;
-    }
+    }*/
 
     @GetMapping("/count")
     public String handleRequest() {

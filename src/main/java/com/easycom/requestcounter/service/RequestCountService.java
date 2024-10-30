@@ -10,12 +10,13 @@ import jakarta.annotation.PostConstruct;
 @Service
 public class RequestCountService {
 
-    private final RequestCountRepository repository;
-
     @Autowired
+    private RequestCountRepository repository;
+
+    /*@Autowired
     public RequestCountService(RequestCountRepository repository) {
         this.repository = repository;
-    }
+    }*/
 
     @PostConstruct
     public void init() {
